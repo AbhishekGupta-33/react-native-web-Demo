@@ -2,13 +2,21 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till the "Creating a new application" step before proceeding.
 
-## Step 1: Start the Metro Server
+## Step 1: Install Dependencies
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Install all required dependencies using:
 
-To start Metro, run the following command from the _root_ of your React Native project:
+```bash
+npm i --force
+```
+
+> ⚠️ The `--force` flag is used to resolve potential dependency conflicts.
+
+## Step 2: Start the Metro Server
+
+Metro is the JavaScript bundler that ships with React Native. Start it with:
 
 ```bash
 # using npm
@@ -18,11 +26,15 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+Let Metro run in its own terminal window.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Step 3: Run the Application
+
+Open a **new terminal** in the root directory of your project.
 
 ### For Android
+
+Make sure you have an Android emulator running or a device connected.
 
 ```bash
 # using npm
@@ -32,48 +44,62 @@ npm run android
 yarn android
 ```
 
-### For iOS
+### For Web
+
+If your project is set up with Webpack for web support:
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm run webpack
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Once Webpack starts, open your browser and navigate to:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```
+http://localhost:3000
+```
 
-## Step 3: Modifying your App
+> ✅ Ensure `webpack.config.js` and related web support files are correctly configured for your project.
 
-Now that you have successfully run the app, let's modify it.
+## Step 4: Modifying Your App
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+You can now start editing the app:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Open `App.tsx` in your preferred text editor.
+2. Make any desired changes.
 
-## Congratulations! :tada:
+### Hot Reloading Instructions
 
-You've successfully run and modified your React Native App. :partying_face:
+- **Android**: Press <kbd>R</kbd> twice or use <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS) to access the Developer Menu and reload.
+- **iOS**: Press <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in the iOS Simulator.
+- **Web**: Changes will hot-reload automatically in your browser at `http://localhost:3000`.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## Congratulations! 🎉
+
+You've successfully run and modified your React Native app on **Android** and **Web**! 🚀
+
+---
+
+### Now What?
+
+- Want to integrate this React Native code into an existing native app? Read the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- New to React Native? Check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+---
 
 # Troubleshooting
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Can't get the app to run? Visit the official [Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
+
+---
 
 # Learn More
 
-To learn more about React Native, take a look at the following resources:
+Explore more about React Native with the following resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- [React Native Website](https://reactnative.dev)
+- [Getting Started](https://reactnative.dev/docs/environment-setup)
+- [Learn the Basics](https://reactnative.dev/docs/getting-started)
+- [Blog](https://reactnative.dev/blog)
+- [`@facebook/react-native`](https://github.com/facebook/react-native)
